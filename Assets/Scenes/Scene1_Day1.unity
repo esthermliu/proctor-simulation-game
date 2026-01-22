@@ -1802,6 +1802,7 @@ GameObject:
   - component: {fileID: 592008136}
   - component: {fileID: 592008135}
   - component: {fileID: 592008134}
+  - component: {fileID: 592008138}
   m_Layer: 0
   m_Name: Student5RyanCole
   m_TagString: Untagged
@@ -1932,6 +1933,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &592008138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592008132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad259024fee24090ad12711540eea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scene1Manager
+  scene2Name: Scene2_Day1
 --- !u!4 &602876391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 397052583232888120, guid: 0ff29020f7a734af4a07aea8728f8141, type: 3}
@@ -4364,13 +4378,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2038193031}
+  - component: {fileID: 2038193032}
   m_Layer: 0
   m_Name: Scene1Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2038193031
 Transform:
   m_ObjectHideFlags: 0
@@ -4386,6 +4401,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2038193032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038193030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad259024fee24090ad12711540eea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scene1Manager
+  scene2Name: Scene2_Day1
 --- !u!1 &2039210577
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StudentAnimationController : MonoBehaviour
 {
     private Animator animator;
     public GameObject nextStudent;
+    public string scene2Name = "Scene2_Day1";
 
     void Awake()
     {
@@ -41,6 +43,11 @@ public class StudentAnimationController : MonoBehaviour
             {
                 anim.SetTrigger("Entrance");
             }
+        } else
+        {
+            // at this point, we load next scene
+            Debug.Log("ON EXIT FINISHED CALLED");
+            SceneManager.LoadScene(scene2Name);
         }
     }
 }

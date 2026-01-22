@@ -1,16 +1,15 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scene1Manager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public string scene2Name = "Scene2_Day1"; // Make sure this matches your scene name
 
-    // Update is called once per frame
-    void Update()
+    // This method is called by the Animation Event
+    public void OnExitFinished()
     {
-        
+        // Load Scene 2
+        Debug.Log("ON EXIT FINISHED CALLED");
+        SceneManager.LoadScene(scene2Name);
     }
 }
