@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Scene2Manager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Scene2Manager : MonoBehaviour
     private bool bad1Triggered = false;
     private bool questionTriggered = false;
     private bool bad2Triggered = false;
+
+    private bool sceneEnded = false;
 
     public TMP_Text timerText;
     private float timeRemaining = 60f;
@@ -71,7 +74,11 @@ public class Scene2Manager : MonoBehaviour
 
     void EndScene()
     {
+        if (sceneEnded) return;
+        sceneEnded = true;
+
         Debug.Log("Scene 2 finished");
-        // Load next scene / summary
+
+        SceneManager.LoadScene("Scene3_Day1");
     }
 }

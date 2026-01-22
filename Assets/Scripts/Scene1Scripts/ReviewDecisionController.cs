@@ -18,12 +18,22 @@ public class ReviewDecisionController : MonoBehaviour
     [Header("Student")]
     public StudentAnimationController student;
 
+    [Header("Correct decision")]
+    public bool isValid;
+
     private bool decisionMade = false;
 
     public void Admit()
     {
         if (decisionMade) return;
         decisionMade = true;
+
+        // ---- GAME LOGIC ----
+        if (isValid)
+        {
+            GameManager.Instance.DecideStudentCorrectly();
+        }
+        // else: incorrect admission (no increment)
 
         ResetPapers();
 
@@ -34,6 +44,13 @@ public class ReviewDecisionController : MonoBehaviour
     {
         if (decisionMade) return;
         decisionMade = true;
+
+        // ---- GAME LOGIC ----
+        if (!isValid)
+        {
+            GameManager.Instance.DecideStudentCorrectly();
+        }
+        // else: incorrect admission (no increment)
 
         ResetPapers();
 
